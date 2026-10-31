@@ -1,10 +1,10 @@
 import random
 
-print("Welcome to Rock-Paper-Scissors")
+print(" Welcome to Rock-Paper-Scissors ")
 
 while True:
- choice = ["rock","paper","scissors"] 
- computer = random.choice(["rock","paper","scissors"])
+ thing = ["rock","paper","scissors"] 
+ computer = random.choice(thing)
  player = input("Enter rock, paper, scissors:")
 
  print("Computer chose:",computer)
