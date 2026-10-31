@@ -34,10 +34,13 @@ if op=="+":
     add(num1,num2)
      
 elif op=="-":
-     sub(num1,num2)
+      sub(num1,num2)
            
 elif op=="*":
      multi(num1,num2)
        
 elif op=="/":
      div(num1,num2)
+     
+else:
+    print("Invalid Operator")
