@@ -2,35 +2,41 @@ import random
 
 print("Welcome to Rock-Paper-Scissors")
 
-choice = ["rock","paper","scissors"]
+while True:
+ choice = ["rock","paper","scissors"] 
+ computer = random.choice(["rock","paper","scissors"])
+ player = input("Enter rock, paper, scissors:")
 
-computer = random.choice(["rock","paper","scissors"])
-player = input("Enter rock, paper, scissors:")
+ print("Computer chose:",computer)
+ print("Player chose:",player)
 
-print("Computer chose:",computer)
-print("Player chose:",player)
-
-if computer == player :
+ if computer == player :
     print("It is a tie")
     
-elif player == "paper":
+ elif player == "paper":
     if computer == "rock":
         print("Player Win")
     else :
         print("Computer Win")
         
-elif player == "rock":
+ elif player == "rock":
     if computer == "scissors":
         print("Player Win")
     else :
          print("Computer Win")
          
-elif  player == "scissors":
+ elif  player == "scissors":
      if computer == "paper":
          print("Player Win")
      else :
          print("Computer Win")
-else :
+ else :
       print("Invalid Choice") 
- 
+      
+ ans = input("Do you want to play again?(y/n):")
+ if ans!='y':
+     print("Thanks for playing")
+     break
+ else :
+     print()
       
