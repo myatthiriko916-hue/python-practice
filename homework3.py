@@ -1,5 +1,9 @@
 import random
 
+print("Welcome to Rock-Paper-Scissors")
+
+choice = ["rock","paper","scissors"]
+
 computer = random.choice(["rock","paper","scissors"])
 player = input("Enter rock, paper, scissors:")
 
@@ -7,7 +11,7 @@ print("Computer chose:",computer)
 print("Player chose:",player)
 
 if computer == player :
-    print("It is a draw")
+    print("It is a tie")
     
 elif player == "paper":
     if computer == "rock":
@@ -27,4 +31,6 @@ elif  player == "scissors":
      else :
          print("Computer Win")
 else :
-      print("Invalid Choice")           
+      print("Invalid Choice") 
+ 
+      
