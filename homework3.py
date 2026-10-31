@@ -1,10 +1,10 @@
 import random
 
-print(" Welcome to Rock-Paper-Scissors ")
+print(" Welcome to Rock-Paper-Scissors Game ")
 
 while True:
- thing = ["rock","paper","scissors"] 
- computer = random.choice(thing)
+ things = ["rock","paper","scissors"] 
+ computer = random.choice(things)
  player = input("Enter rock, paper, scissors:")
 
  print("Computer chose:",computer)
@@ -31,10 +31,10 @@ while True:
      else :
          print("Computer Win")
  else :
-      print("Invalid Choice") 
+      print("Invalid Things") 
       
  ans = input("Do you want to play again?(y/n):")
- if ans!='y':
+ if ans!='y' :
      print("Thanks for playing")
      break
  else :
