@@ -1,10 +1,134 @@
 import random 
 import webbrowser
 
+def myanmar_food():
+      
+    print("\n===Myanmar Food===\n")
+    print("1.Mohinga , 2000MMK")
+    print("2.Shan Noodle ,3000MMK ")
+    print("3.Noodle Salad , 2000MMK")
+    
+    food_num =int (input("Choose your food:"))
+    
+    if food_num == 1 :
+        cus_info ("Mohinga" , 2000)
+        
+    elif food_num == 2 :
+        cus_info ("Shan Noodle" , 3000)
+        
+    elif food_num == 3 :
+        cus_info ("Noodle Salad" , 2000)
+        
+    else :
+        print("Invalid Food Number!")
+
+def thai_food():
+      
+    print("\n===Thai Food===\n")
+    print("1.Pad Thai , 5000MMK")
+    print("2.Tom Yum , 6000MMK")
+    print("3.Green Curry , 5000MMK")
+    
+    food_num =int (input("Choose your food:"))
+    
+    if food_num == 1 :
+          cus_info ("Pad Thai" , 5000)
+        
+    elif food_num == 2 :
+         cus_info ("Tom Yum" , 6000)
+       
+    elif food_num == 3 :
+        cus_info ("Green Curry" , 5000)
+        
+    else :
+        print("Invalid Food Number!")
+        
+def korean_food():
+           
+   print("\n===Korean Food===\n")
+   print("1.Korean Fried Chicken , 3500MMK ")
+   print("2.Kimchi Jjigae , 4000MMK")
+   print("3.Bibimbap , 4500MMK")
+         
+   food_num =int (input("Choose your food:"))
+         
+   if food_num == 1 :
+          cus_info ("Korean Fried Chicken" , 3500)
+        
+   elif food_num == 2 :
+         cus_info ("Kimchi Jjigae" , 4000)       
+            
+   elif food_num == 3 :
+         cus_info ("Bibimbap" , 4500)
+              
+   else :
+      print("Invalid Food Number!")        
+
+def chinese_food():
+      
+    print("\n===Chinese Food===\n")
+    print("1.Fried Rice , 3500")
+    print("2.Hot Pot , 8500")
+    print("3.Spring Rolls , 2500")
+    
+    food_num =int (input("Choose your food:"))
+    
+    if food_num == 1 :
+        cus_info("Fried Rice", 3500)
+        
+    elif food_num == 2 :
+        cus_info ( "Hot Pot" , 8000)
+       
+    elif food_num == 3 :
+        cus_info ("Spring Rolls" ,2000)
+        
+    else :
+        print("Invalid Food Number!")
+
+def payment_method():
+       
+     print("\n===Payment Method===\n") 
+     print("1.Cash")
+     print("2.KPay")
+     print("3.WavePay")
+     
+     payment = input ("Choose your payment type:")
+     
+     if payment == 1 :
+         print ( "Cash")
+     
+     elif payment == 2 :
+         print( "KPay") 
+     
+     elif payment == 3 :
+          print("WavePay")
+     
+     else :
+         print("Invalid Payment Method!")
+
+def cus_info(food,price):
+    
+    print ("Enter Customer Information")
+    name = input ("Enter Your Name:")
+    phone = input ("Enter Your Phone Number:") 
+    qty = int (input("Enter Quantity:"))
+    total = price * qty 
+    payment = payment_method()
+   
+    print("==========")
+    print("Ordering System")
+    print("==========")
+    print("Customer Name:", name)
+    print("Phone Number:", phone)
+    print("Food Name:", name)
+    print("Food Price:", price)
+    print("Quantity:", qty)
+    print("Total Bill:", total , "MMK")
+    print("Payment Method:", payment)
+    print("Thank For Ordering!")     
+
 def food_system():
-    
-  while True:
-    
+  while True:  
     print("==========")
     print("Welcome To Food System")
     print("==========")
@@ -12,155 +136,37 @@ def food_system():
     print("2.Thai Food")
     print("3.Korean Food")
     print("4.Chinese Food")
+    print("5.Exit")
     
-    choice = input("Choose  food category:")
+    choice = int(input("Choose  food category:"))
     
-    if   choice == "1" :
+    if   choice == 1 :
            myanmar_food()
         
-    elif choice == "2" :
+    elif choice == 2 :
            thai_food()
         
-    elif choice == "3" :
+    elif choice == 3 :
            korean_food()
               
-    elif choice == "4" :
+    elif choice == 4 :
            chinese_food()
-        
+           
+    elif  choice == 5 :
+           print("Thank You")
+           break
     else :
-         print("Invalid Category!")
-         continue 
+           print("Invalid Category!")
+           continue 
      
     ans = input ("Do you want to order again? (y/n):")
-    if ans == "y" :
-        continue
+    if ans.upper() == "n" :
+        print ("Thank For Using Food System!")
+        break
+    
     else :
-        print("Thank for using Food System!")
-        break 
-
-def myanmar_food():
-      
-    print("Myanmar Food")
-    print("1.Mohinga")
-    print("2.Shan Noodle")
-    print("3.Noodle Salad")
-    
-    food_num =int (input("Choose your food:"))
-    
-    if food_num == 1 :
-        food = "Mohinga"
-        price = 2000
-    elif food_num == 2 :
-        food = "Shan Noodle"
-        price = 3000
-       
-    elif food_num == 3 :
-        food = "Noodle Salad"
-        price = 2000
+        print ()
         
-    else :
-        print("Invalid Food Number!")
-        return
-    cus_info (food, price)
-     
-def thai_food():
-      
-    print("Thai Food")
-    print("1.Pad Thai")
-    print("2.Tom Yum")
-    print("3. Green Curry")
-    
-    food_num =int (input("Choose your food:"))
-    
-    if food_num == 1 :
-        food = "Pad Tha"
-        price = 6000
-    elif food_num == 2 :
-        food = "Tom Yum"
-        price = 5000
-       
-    elif food_num == 3 :
-        food = "Green Curry"
-        price = 4500
-        
-    else :
-        print("Invalid Food Number!")
-        return
-    cus_info(food,price)
-     
-def korean_food():
-           
-   print("Korean Food")
-   print("1.Korean Fried Chicken")
-   print("2.Kimchi Jjigae")
-   print("3.Bibimbap")
-         
-   food_num =int (input("Choose your food:"))
-         
-   if food_num == 1 :
-        food = "Korean Fried Chicken"
-        price = 3500
-   elif food_num == 2 :
-        food = "Kimchi Jjigae"
-        price = 3000
-            
-   elif food_num == 3 :
-       food = "Bibimbap"
-       price = 6000
-             
-   else :
-      print("Invalid Food Number!")
-      return
-   cus_info(food,price)
- 
-def chinese_food():
-      
-    print("Chinese Food")
-    print("1.Fried Rice")
-    print("2.Hot Pot")
-    print("3.Spring Rolls")
-    
-    food_num =int (input("Choose your food:"))
-    
-    if food_num == 1 :
-        food = "Fried Rice"
-        price = 3500
-    elif food_num == 2 :
-        food = "Hot Pot"
-        price = 8000
-       
-    elif food_num == 3 :
-        food = "Spring Rolls"
-        price = 2000
-        
-    else :
-        print("Invalid Food Number!")
-        return
-    cus_info(food,price) 
-
-def cus_info(food,price):
-    
-    print("Food Name:",food)
-    print("Food Price:",price,"MMK") 
-   
-    qty = int (input("Enter Quantity:"))
-    total = price * qty 
-   
-    print ("Enter Customer Information")
-    name = input ("Enter Your Name:")
-    phone = input ("Enter Your Phone Number:")  
-   
-    print("==========")
-    print("Ordering System")
-    print("==========")
-    print("Customer Name:",name)
-    print("Phone Number:",phone)
-    print("Food Name:",name)
-    print("Food Price:",price)
-    print("Quantity:",qty)
-    print("Total Bill:",total,"MMK")
-    
-    print("Thank For Ordering!")
-   
-food_system()     
-           
+def main() :          
+  food_system()
+main()  
