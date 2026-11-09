@@ -92,16 +92,16 @@ def payment_method():
      print("2.KPay")
      print("3.WavePay")
      
-     payment = input ("Choose your payment type:")
+     payment = int(input ("Choose your payment type:"))
      
      if payment == 1 :
-         print ( "Cash")
+          return "Cash"
      
      elif payment == 2 :
-         print( "KPay") 
+         return "KPay"
      
      elif payment == 3 :
-          print("WavePay")
+          return "WavePay"
      
      else :
          print("Invalid Payment Method!")
@@ -125,10 +125,12 @@ def cus_info(food,price):
     print("Quantity:", qty)
     print("Total Bill:", total , "MMK")
     print("Payment Method:", payment)
-    print("Thank For Ordering!")     
+    print("Thank For Ordering!\n")     
 
 def food_system():
-  while True:  
+    
+  while True: 
+      
     print("==========")
     print("Welcome To Food System")
     print("==========")
@@ -136,7 +138,6 @@ def food_system():
     print("2.Thai Food")
     print("3.Korean Food")
     print("4.Chinese Food")
-    print("5.Exit")
     
     choice = int(input("Choose  food category:"))
     
@@ -152,21 +153,14 @@ def food_system():
     elif choice == 4 :
            chinese_food()
            
-    elif  choice == 5 :
-           print("Thank You")
-           break
     else :
-           print("Invalid Category!")
-           continue 
-     
-    ans = input ("Do you want to order again? (y/n):")
-    if ans.upper() == "n" :
-        print ("Thank For Using Food System!")
+           print("Invalid Category!") 
+           
+    ans = input("Do you want to order again?(y/n):")
+    if ans!='y' :
+        print("Thanks For Using Food System !")
         break
-    
     else :
-        print ()
-        
-def main() :          
-  food_system()
-main()  
+        print()       
+           
+food_system()      
